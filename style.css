@@ -1,0 +1,141 @@
+body {
+    background-color: white;
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    align-content: center;
+    margin-top: 60px;
+    grid-template-columns: max-content max-content max-content;
+    
+}
+
+.box {
+    border: solid;
+    width: 300px;
+    height: 200px;
+}
+
+.vtdtTransition {
+    position: absolute;
+    background-color: violet;
+    width: 150px;
+    height: 150px;
+    transition: width 2s;
+}
+
+.VTDT:hover .vtdtTransition {
+    width: 0px;
+}
+
+.VTDT {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#confetti-wrapper {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.confetti {
+    position: absolute;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    opacity: 0;
+    animation: confettiRain 2s infinite;
+}
+
+@keyframes confettiRain {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(200px);
+        opacity: 0;
+    }
+}
+
+
+.misteryButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes rotateButton {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+
+
+@keyframes rotateButtonReverse {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(-360deg);
+    }
+}
+
+.circle {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-image: radial-gradient(white 1%, black 70%, gray 68%, black 1%);
+    border-radius: 100%;
+    animation: pulse 4s ease-in-out infinite;
+  }
+
+.circleContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1.1);
+    }
+    
+    50% {
+      transform: scale(1.5);
+    }
+    
+    100% {
+      transform: scale(1.1);
+    }
+  }
+
+
+  .linkMess{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  a {
+    transition: all 0s ease;
+    transition-delay: 1s;
+    color: blue;
+  }
+
+  a:visited {
+    color: red;
+  }
+  a:hover {
+    color: green;
+  }
